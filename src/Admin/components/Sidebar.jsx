@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
-  // Sadece ihtiyacımız olan menüler kalsın
   const menuItems = [
     { name: 'Dashboard', path: '/admin' },
     { name: 'Projeler', path: '/admin/projects' },
@@ -37,12 +36,11 @@ const Sidebar = () => {
   );
 };
 
-// --- STİLLER ---
 const sidebarStyle = {
   width: '260px',
   background: '#1e1e2d',
   height: '100vh',
-  position: 'fixed', // Sabit kalması için
+  position: 'fixed', 
   left: 0,
   top: 0,
   zIndex: 1000

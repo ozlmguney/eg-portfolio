@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../firebase'; // Firebase dosyanın yolundan emin ol
+import { auth } from '../../firebase'; 
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -44,5 +44,4 @@ const Login = () => {
   );
 };
 
-// EN ÖNEMLİ SATIR BURASI:
 export default Login;

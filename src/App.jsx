@@ -27,11 +27,9 @@ function App() {
   return (
     <BrowserRouter>
   <Routes>
-    {/* Ana Sayfa ve Login */}
     <Route path="/" element={<Home />} />
     <Route path="/login" element={<Login />} />
 
-    {/* Admin Paneli ve Alt Sayfaları */}
     <Route path="/admin" element={user ? <Admin /> : <Navigate to="/login" />}>
       <Route index element={<Dashboard />} />
       <Route path="projects" element={<Projects />} />
@@ -39,7 +37,6 @@ function App() {
       <Route path="messages" element={<Messages />} />
     </Route>
     
-    {/* Eğer yukarıdakilerin hiçbiri değilse ana sayfaya at */}
     <Route path="*" element={<Navigate to="/" />} />
   </Routes>
 </BrowserRouter>

@@ -49,7 +49,7 @@ const Skills = () => {
         data={skills.map(s => ({ 
         id: s.id, 
         name: s.name, 
-        level: s.level // m.email veya m.message göndermiyoruz burada!
+        level: s.level 
         }))}
         onDelete={(item) => handleDelete(item.id)}
         />

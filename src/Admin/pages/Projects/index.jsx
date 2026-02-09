@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../../../firebase';
-// updateDoc ve getDocs buraya eklendi!
 import { collection, addDoc, getDocs, deleteDoc, doc, updateDoc } from 'firebase/firestore'; 
 import Table from '../../components/Table';
 
@@ -9,7 +8,6 @@ const Projects = () => {
   const [newProject, setNewProject] = useState({ name: '', tech: '', link: '', date: '' });
   const [editingId, setEditingId] = useState(null);
 
-  // 1. Verileri Çekme Fonksiyonu (Eksikti, eklendi)
   const fetchProjects = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, "projects"));
@@ -24,7 +22,6 @@ const Projects = () => {
     fetchProjects();
   }, []);
 
-  // 2. Silme Fonksiyonu (Eksikti, eklendi)
   const handleDelete = async (id) => {
     if (window.confirm("Bu projeyi silmek istediğine emin misin?")) {
       try {
