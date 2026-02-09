@@ -96,8 +96,9 @@ const Home = () => {
 
           <h1 style={heroTitle}>Beyza <span style={gradientText}>Portfolio</span></h1>
 
-          <p style={heroSub}>{aboutData ? aboutData : ""}</p>
-          
+          <p style={heroSub}>
+            {aboutData ? aboutData : "..."} 
+          </p>          
 
           <div style={socialWrapper}>
 
