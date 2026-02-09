@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
-
 import { db } from '../../firebase';
-
 import { doc, getDoc, collection, getDocs, addDoc } from 'firebase/firestore'; 
-
 import { motion } from 'framer-motion';
-
 
 
 const Home = () => {
@@ -17,8 +13,6 @@ const Home = () => {
   const [skills, setSkills] = useState([]);
 
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-
-
 
   useEffect(() => {
 
@@ -41,8 +35,6 @@ const Home = () => {
     fetchData();
 
   }, []);
-
-
 
   const handleSubmit = async (e) => {
 
@@ -72,8 +64,6 @@ const Home = () => {
 
   };
 
-
-
   return (
 
     <div style={mainContainer}>
@@ -81,8 +71,6 @@ const Home = () => {
       <div style={blobOne}></div>
 
       <div style={blobTwo}></div>
-
-
 
       <motion.header initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} style={heroWrapperModern}>
 
@@ -112,8 +100,6 @@ const Home = () => {
 
         </div>
 
-
-
         <motion.div initial={{ opacity: 0, x: 50, rotate: 5 }} animate={{ opacity: 1, x: 0, rotate: -3 }} whileHover={{ rotate: 0, scale: 1.05 }} style={photoCardContainer}>
 
           <div style={photoCardFrame}>
@@ -134,8 +120,6 @@ const Home = () => {
 
       </motion.header>
 
-
-
       <section style={contentSection}>
 
         <h2 style={sectionHeading}>Yeteneklerim</h2>
@@ -151,20 +135,13 @@ const Home = () => {
                 <span style={{ fontWeight: '700' }}>{skill.name}</span>
 
                 <span style={{ color: '#a855f7' }}>%{skill.level}</span>
-
               </div>
-
               <div style={barBg}><motion.div initial={{ width: 0 }} whileInView={{ width: `${skill.level}%` }} transition={{ duration: 1 }} style={barFill} /></div>
-
             </motion.div>
-
           ))}
-
         </div>
 
       </section>
-
-
 
      <section style={contentSection}>
 
@@ -191,12 +168,8 @@ const Home = () => {
     </div>
   </motion.div>
 ))}
-
   </div>
-
 </section>
-
-
 
       <section style={contentSection}>
 
@@ -213,8 +186,6 @@ const Home = () => {
             <motion.div whileHover={{ x: 10 }} style={smallContactCard}>📍 İstanbul, Türkiye</motion.div>
 
           </div>
-
-
 
           <motion.form onSubmit={handleSubmit} style={messageForm} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
 
@@ -237,8 +208,6 @@ const Home = () => {
   );
 
 };
-
-
 
 const mainContainer = { backgroundColor: '#0a0a0c', color: '#fff', minHeight: '100vh', padding: '60px 20px', fontFamily: "'Inter', sans-serif", overflow: 'hidden', position: 'relative' };
 
