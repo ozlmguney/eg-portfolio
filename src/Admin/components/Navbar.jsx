@@ -9,7 +9,7 @@ const Navbar = () => {
       padding: '0 30px',
       borderBottom: '1px solid #edf2f7'
     }}>
-      <div style={{ color: '#4a5568', fontWeight: '500' }}>Hoş geldin, <span style={{color: '#a855f7'}}>Özlem</span> 👋</div>
+      <div style={{ color: '#4a5568', fontWeight: '500' }}>Hoş geldin, <span style={{color: '#a855f7'}}>Beyza</span> 👋</div>
       <button style={{
         padding: '8px 15px',
         borderRadius: '20px',
