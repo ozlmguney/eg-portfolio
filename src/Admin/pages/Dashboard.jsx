@@ -19,7 +19,7 @@ const Dashboard = () => {
   return (
     <div style={{ padding: '30px' }}>
       <h1 style={{ color: '#1e1e2d', marginBottom: '20px' }}>Dashboard</h1>
-      <div style={{ background: 'white', padding: '20px', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
+      <div style={{ background: 'white', padding: '20px', borderRadius: '12px', boxShadow: '0 4px 6px rgba(116, 56, 108, 0.05)' }}>
         <h3>Portfolyo Hakkımda Metni</h3>
         <textarea 
           style={{ width: '100%', height: '150px', padding: '15px', borderRadius: '8px', border: '1px solid #ddd', marginTop: '10px' }}
