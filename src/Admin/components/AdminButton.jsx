@@ -5,7 +5,6 @@ const AdminButton = () => {
   const navigate = useNavigate();
 
   return (
-    // 'right-6' butonu sağ üst köşeye sabitler
     <div style={{ position: 'fixed', top: '24px', right: '24px', zIndex: 1000 }}>
       <button
         onClick={() => navigate("/login")}
