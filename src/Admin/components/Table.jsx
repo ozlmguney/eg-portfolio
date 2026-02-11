@@ -13,26 +13,69 @@ const Table = ({ headers, data, onDelete, onEdit }) => {
         <tbody>
           {data.map((item, index) => (
             <tr key={item.id || index} style={{ borderBottom: '1px solid #eee' }}>
-              {/* Veri hücreleri */}
               {Object.keys(item).filter(k => k !== 'id').map(key => (
                 <td key={key} style={tdStyle}>{item[key]}</td>
               ))}
 
-              {/* 2. ADIM: Butonları buraya ekle */}
               <td style={{ ...tdStyle, textAlign: 'center', display: 'flex', gap: '10px', justifyContent: 'center' }}>
-                <button 
-                  onClick={() => onEdit(item)} // Düzenle fonksiyonunu tetikler
-                  style={{ color: '#0ea5e9', border: '1px solid #0ea5e9', background: 'none', padding: '5px 10px', borderRadius: '5px', cursor: 'pointer' }}
-                >
-                  ✏️ Düzenle
-                </button>
-                <button 
-                  onClick={() => onDelete(item)} 
-                  style={{ color: '#dc3545', border: '1px solid #dc3545', background: 'none', padding: '5px 10px', borderRadius: '5px', cursor: 'pointer' }}
-                >
-                  🗑️ Sil
-                </button>
-              </td>
+  <button 
+    onClick={() => onEdit(item)} 
+    style={{ 
+      color: '#000000', 
+      border: '1px solid #4c1d95', 
+      background: 'transparent', 
+      padding: '6px 14px', 
+      borderRadius: '6px', 
+      cursor: 'pointer',
+      fontSize: '12px',
+      fontWeight: '600',
+      transition: '0.2s ease', 
+      display: 'flex',
+      alignItems: 'center',
+      gap: '5px',
+      outline: 'none'
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.backgroundColor = '#4c1d95'; 
+      e.currentTarget.style.color = '#ffffff'; 
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.backgroundColor = 'transparent'; 
+      e.currentTarget.style.color = '#000000';
+    }}
+  >
+    Düzenle
+  </button>
+
+  <button 
+    onClick={() => onDelete(item)} 
+    style={{ 
+      color: '#000000',  
+      border: '1px solid #881337', 
+      background: 'transparent',
+      padding: '6px 14px', 
+      borderRadius: '6px', 
+      cursor: 'pointer',
+      fontSize: '12px',
+      fontWeight: '600',
+      transition: '0.2s ease',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '5px',
+      outline: 'none'
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.backgroundColor = '#881337';
+      e.currentTarget.style.color = '#ffffff'; 
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.backgroundColor = 'transparent';
+      e.currentTarget.style.color = '#000000'; 
+    }}
+  >
+    Sil
+  </button>
+</td>
             </tr>
           ))}
         </tbody>

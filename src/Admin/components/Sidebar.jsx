@@ -12,7 +12,7 @@ const Sidebar = () => {
   return (
     <div style={sidebarContainer}>
       <div style={logoWrapper}>
-        <div style={logoCircle}>A</div>
+       
         <div>
           <h2 style={logoText}>Hoşgeldin 
             <span style={{ color: '#d8b4fe' }}> BEYZA</span></h2>
