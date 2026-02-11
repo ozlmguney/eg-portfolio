@@ -44,7 +44,7 @@ const Sidebar = () => {
            onClick={() => window.open('/', '_blank')}
            style={footerBtn}
         >
-          Siteyi Görüntüle ↗
+          Çıkış Yap
         </button>
       </div>
     </div>
