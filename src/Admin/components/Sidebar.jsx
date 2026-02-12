@@ -6,8 +6,6 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // signOut(auth) işlemini siliyoruz çünkü bu seni login'e zorlar.
-    // Sadece ana sayfaya (portfolyona) dönmek istiyorsan:
     navigate('/'); 
   };
 
@@ -18,7 +16,6 @@ const Sidebar = () => {
     { name: 'Mesajlar', path: '/admin/messages' },
   ];
 
-  // --- STİL TANIMLAMALARI (Hata Almamak İçin Bileşen İçinde veya Hemen Altında Olmalı) ---
   const sidebarContainer = {
     width: '260px',
     backgroundColor: '#0f0a15',
